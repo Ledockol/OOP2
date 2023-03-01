@@ -3,10 +3,12 @@ import java.util.ArrayList;
 import java.util.List;
 public class WendingMachine {
     public Double getMoney() {
+
         return money;
     }
     private Double money = 0.0;
     public List<Product> getProducts() {
+
         return products;
     }
     private List<Product> products = new ArrayList<>();
@@ -23,6 +25,7 @@ public class WendingMachine {
         }
         return null;
     }
+
     public Product buy(String name, Double price){
         Product something = findProduct(name);
         if (something == null ) return null;
@@ -34,6 +37,7 @@ public class WendingMachine {
         System.out.println("price is wrong");
         return null;
     }
+
     @Override
     public String toString(){
         StringBuilder wdProducts = new StringBuilder();
@@ -45,5 +49,6 @@ public class WendingMachine {
         wdProducts.append(money);
         return wdProducts.toString();
     }
+
 
 }
